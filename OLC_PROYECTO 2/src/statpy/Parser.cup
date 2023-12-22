@@ -30,16 +30,11 @@ action code
 
 
 //------> Declaración de terminales
-
-
-terminal String ENTERO, DECIMAL;
-terminal String ID, IGUAL, PUNTOYCOMA, COMA, ASTERISCO, LETRA, MAS, TIPO;
-terminal String PAREN_IZQ, PAREN_DER;
+terminal String ENTERO;
 
 
 //------> Declaración de no terminales
-
-non terminal inicio, W, E, N, D, Y;
+non terminal inicio;
 
 
 //------> Definir Simbolo Inicial
@@ -48,25 +43,5 @@ start with inicio;
 
 // ------------>  Producciones  <------------
 
-inicio ::= inicio:i MAS W:w{:
-       RESULT = i+w;
-:}
-    |W:w{:
-        RESULT = w;
-:}
+inicio ::= ENTERO
 ;
-
-
-W ::= W:w ASTERISCO E:e{:
-        RESULT = w*e;
-:}
-    |E:e{:
-        RESULT = e;
-:};
-
-E ::= ENTERO:entero{:
-        RESULT = Integer.parseInt(entero.toString());
-:}
-| PAREN_IZQ inicio:i PAREN_DER{:
-    RESULT = i;
-:};
