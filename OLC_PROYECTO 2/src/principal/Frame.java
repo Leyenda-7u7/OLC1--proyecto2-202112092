@@ -4,8 +4,8 @@
  */
 package principal;
 
-import analizador.Lexer;
-import analizador.Parser;
+import statpy.Lexer;
+import statpy.Parser;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;

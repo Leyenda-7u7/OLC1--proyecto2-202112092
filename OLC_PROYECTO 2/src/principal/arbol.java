@@ -2,9 +2,10 @@ package principal;
 
 import java.util.ArrayList;
 
+
 public class arbol {
     
-	public String lex;
+    	public String lex;
 	public ArrayList<arbol> hijos;
 	
 	public arbol(String lex) {
@@ -22,4 +23,5 @@ public class arbol {
 		}
 		System.out.println(raiz.lex);
 	}
+    
 }

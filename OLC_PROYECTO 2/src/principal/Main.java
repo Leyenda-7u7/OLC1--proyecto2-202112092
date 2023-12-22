@@ -1,7 +1,7 @@
 package principal;
 
-import analizador.Lexer;
-import analizador.Parser;
+import statpy.Lexer;
+import statpy.Parser;
 import java.io.StringReader;
 
 public class Main {
